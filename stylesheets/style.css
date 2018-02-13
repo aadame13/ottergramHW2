@@ -1,12 +1,9 @@
 @font-face {
   font-family: 'airstreamregular';
-src: url('fonts/Airstream-webfont.eot');
-src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'),
-     url('fonts/Airstream-webfont.woff') format('woff'),
-     url('fonts/Airstream-webfont.ttf') format('truetype'),
-     url('fonts/Airstream-webfont.svg#airstreamregular') format('svg');
-font-weight: normal;
-font-style: normal;
+  src: url('fonts/Airstream-webfont.eot');
+  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Airstream-webfont.woff') format('woff'), url('fonts/Airstream-webfont.ttf') format('truetype'), url('fonts/Airstream-webfont.svg#airstreamregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -107,7 +104,7 @@ li {
 }
 
 .detail-image-title {
-  position:absolute;
+  position: absolute;
   bottom: -16px;
   left: 4px;
   font-family: airstreamregular;
