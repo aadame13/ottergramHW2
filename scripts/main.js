@@ -28,7 +28,7 @@ function setDetailsFromThumb(thumbnail) {
 
 function addThumbClickHandler(thumb) {
   "use strict";
-  thumb.addEventListener("click", function(event) {
+  thumb.addEventListener("click", function (event) {
     event.preventDefault();
     setDetailsFromThumb(thumb);
   });
@@ -43,8 +43,36 @@ function getThumbnailsArray() {
 
 function initializeEvents() {
   "use strict";
+  navigateButtons();
   var thumbnails = getThumbnailsArray();
   thumbnails.forEach(addThumbClickHandler);
+}
+
+// CODE FOR BUTTONS AND CAROUSEL EFFECT
+function navigateButtons() {
+  var previousButton = document.querySelector("#previous");
+  var nextButton = document.querySelector("#next");
+  var imageArray = getThumbnailsArray();
+  var index = 0;
+  var numOfElements = imageArray.length - 1;
+
+  previousButton.addEventListener("click", function () {
+    if (index === 0) {
+      index = numOfElements;
+    } else {
+      index -= 1;
+    }
+    setDetailsFromThumb(imageArray[index]);
+  });
+
+  nextButton.addEventListener("click", function () {
+    if (index === numOfElements) {
+      index = 0;
+    } else {
+      index += 1;
+    }
+    setDetailsFromThumb(imageArray[index]);
+  });
 }
 
 initializeEvents();
