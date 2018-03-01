@@ -28,7 +28,7 @@ function setDetailsFromThumb(thumbnail) {
 
 function addThumbClickHandler(thumb) {
   "use strict";
-  thumb.addEventListener("click", function (event) {
+  thumb.addEventListener("click", function(event) {
     event.preventDefault();
     setDetailsFromThumb(thumb);
   });
@@ -56,7 +56,7 @@ function navigateButtons() {
   var index = 0;
   var numOfElements = imageArray.length - 1;
 
-  previousButton.addEventListener("click", function () {
+  previousButton.addEventListener("click", function() {
     if (index === 0) {
       index = numOfElements;
     } else {
@@ -65,7 +65,7 @@ function navigateButtons() {
     setDetailsFromThumb(imageArray[index]);
   });
 
-  nextButton.addEventListener("click", function () {
+  nextButton.addEventListener("click", function() {
     if (index === numOfElements) {
       index = 0;
     } else {
